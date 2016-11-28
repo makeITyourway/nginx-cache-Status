@@ -5,7 +5,10 @@
 ### info@makeityourway.de
 ### www.miyw.de
 ###
-####
+### requires nginx access log_format to look like this
+### log_format rt_cache '$remote_addr - $upstream_cache_status [$time_local]' ' "$host" "$request" $status $body_bytes_sent ' '"$http_referer" "$http_user_agent"';
+###
+###########
 
 if [ -z "$1" ] ; then
 	echo "please specify the access logfile"
